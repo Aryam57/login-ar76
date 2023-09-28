@@ -32,12 +32,13 @@ const Navbar = () => {
   }, [user]);
 
   return (
-    <div className="h-20 w-full border-b-2 flex items-center justify-between p-2">
-      <ul className="flex p-4">
-        <li className="p-2 cursor-pointer text-white no-underline hover:text-blue-500">
+    <div className="h-20 w-full border-b-2 flex items-center justify-between p-2 bg-violet-100">
+      <h2 className="pt-8 p-7 text-left text-black text-3xl font-mono font-bold" >book.com</h2>
+      <ul className="flex p-4 ">
+        <li className="p-2 cursor-pointer  no-underline text-md text-black  font-mono font-bold">
           <Link href="/">Home</Link>
         </li>
-        <li className="p-2 cursor-pointer">
+        <li className="p-2 cursor-pointer   no-underline text-md  text-black  font-mono font-bold ">
           <Link href="/about">About</Link>
         </li>
 
@@ -50,10 +51,11 @@ const Navbar = () => {
 
       {loading ? null : !user ? (
         <ul className="flex">
-          <li onClick={handleSignIn} className="p-2 cursor-pointer">
+          <li onClick={handleSignIn} className="bg-gray-200 text-black  font-mono font-bold rounded-lg p-2">
             Login
           </li>
-          <li onClick={handleSignIn} className="p-2 cursor-pointer">
+          <span className="mx-2" ></span>
+          <li onClick={handleSignIn} className="text-gray-500  rounded-lg p-2 text-black  font-mono font-bold ">
             Sign up
           </li>
         </ul>
